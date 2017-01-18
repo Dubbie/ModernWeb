@@ -2,7 +2,7 @@
   $active = 'index';
   $title = 'Home';
 
-  include '/inc/header.php';
+  include './inc/header.php';
 ?>
 <div class='has-text-centered'>
   <h1 class='title is-huge'>Welcome</h1>
