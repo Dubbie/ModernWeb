@@ -12,7 +12,7 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
 body {
   color: #fff;
   background-color: #000;
-  background-image: url("http://djsall.ddns.net/img/bg.jpg");
+  background-image: url('../img/bg.jpg');
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;

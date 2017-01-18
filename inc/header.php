@@ -16,7 +16,7 @@
   <nav class='nav'>
     <div class='nav-left'>
       <a href='#!' class='nav-item'>
-        <img src='http://djsall.ddns.net/img/logo.png' class='logo'>
+        <img src='../img/logo.png' class='logo'>
       </a>
     </div>
     <ul class='nav-right'>
