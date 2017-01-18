@@ -1,22 +1,12 @@
 <?php
   $active = 'index';
   $title = 'Home';
-  include './inc/header.php';
-  
+
+  include '/inc/header.php';
 ?>
-<div class="centered full">
-  <div class="text-centered">
-    <h1>Welcome</h1>
-    <h2>To my website</h2>
-  </div>
+<div class='has-text-centered'>
+  <h1 class='title is-huge'>Welcome</h1>
+  <h2 class='subtitle is-huge'>To my website</h2>
 </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  <script src="./js/main.js"></script>
-  <?php include './inc/footer.php'; ?>
+<script src='./js/main.js'></script>
+<?php include './inc/footer.php'; ?>

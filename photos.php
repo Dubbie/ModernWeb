@@ -1,18 +1,9 @@
 <?php
   $active = 'photos';
   $title = 'Photos';
+  
   include './inc/header.php';
-  
 ?>
-  <h1>photos</h1>
-  
-  
-  
-  
-  
-  
-  
-  
-  
+<h1 class='title'>Photos</h1>
 <!--  <script src="./js/main.js"></script>-->
-  <?php include './inc/footer.php'; ?>
+<?php include './inc/footer.php'; ?>

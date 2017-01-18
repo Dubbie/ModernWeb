@@ -1,83 +1,162 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
+* {
+  box-sizing: border-box;
+}
+
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background: url('../img/bg.JPG');
   color: #fff;
-  font-size: 16px;
+  background-color: #000;
+  background-image: url("http://djsall.ddns.net/img/bg.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-  background-color: #000;
-  min-height: 100vh;
-  margin: 0px;
-}
-.listItem {
-  padding: 0px 2vw 0px 2vw;
-  display: inline-block;
-  list-style-type: none;
-  color: #fff;
-  text-decoration: none;
-}
-.container {
-  width: 100vw;
+  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+  /* FONTOS AZ MIATT HOGY TELJESBE MENJEN AZ OLDAL */
   height: 100vh;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 0px;
-}
-.logo {
-  text-align: left;
-}
-.nav {
-  font-size: 17px;
-  font-weight: 200;
-  width:100%;
-  padding: 0px;
-  background: black;
-  height: 5vh;
   display: flex;
-  justify-content: space-between;
-  font-family: 'Roboto', sans-serif;
-  border-bottom: 1.5px solid transparent;
-  transition: none;
+  flex-direction: column;
 }
-.listItem:hover {
-  border-bottom: 1.5px solid #fff;
-}
+
 a {
-  color: #fff;
   text-decoration: none;
 }
-.main {
-  margin-top: 5vh;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70vw;
-  height: 80vh;
-  color: white;
-  font-family: sans-serif; 
+
+ul {
+  list-style-type: none;
 }
-h1 {
-  opacity: 0.75;
-  font-size: 200px;
-  display: block;
-  margin: 0;
-  padding: 0;
+
+/* HANYAGOLD AZ ID-KET! */
+/* Csak arra rakj ID-t amiböl tuti hogy csak egy lesz. */
+/* Azt is általában csak azért mert JS-sel könnyen megtalálod. */
+#header {
+  background: linear-gradient(0deg, transparent, black);
 }
-h2 {
-  opacity: 0.75;
-  font-size: 40px;
-  display: block;
-  margin: 0;
-  padding: 0;
+
+#main {
+  /* Ez miatt fogja beteríteni a #main a teljes oldalt ami marad */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
-.centered {
+
+#footer {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 1.5rem 0.75rem;
+}
+
+/* Mostmá jöhetnek a classok, ezekböl építed az oldalt. */
+/* Pont mintha legóznál! */
+.nav {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.text-centered {
+  min-height: 3.5rem;
+  position: relative;
   text-align: center;
+  z-index: 2;
 }
-.full {
+
+.nav-left, .nav-right {
+  align-items: stretch;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.nav-left {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.nav-center {
+  align-items: stretch;
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-right {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  display: block;
+  padding: 0.5rem;
+}
+
+a.nav-item, .nav-item a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+a.nav-item:hover, a.nav-item.is-active, .nav-item a:hover, .nav-item a.is-active {
+  color: white;
+}
+
+/* Tudom, hosszú volt a nav, de ezt már kitudod másolni más oldalra is és nem kell újra megírnod... enjoy. */
+.title, .subtitle {
+  word-break: break-word;
+}
+
+.title {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.125;
+}
+.title.is-huge {
+  font-size: 25vh;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.subtitle.is-huge {
+  font-size: 10vh;
+}
+
+.title + .subtitle {
+  margin-top: -1.25rem;
+}
+
+/* Segéd classok */
+.is-link {
+  position: relative;
+}
+
+.is-link:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 200ms ease-in-out;
+}
+
+.is-link:hover:after, .is-link.is-active:after {
   width: 100%;
-  height: 100%;
+}
+
+.has-text-centered {
+  text-align: center;
 }
